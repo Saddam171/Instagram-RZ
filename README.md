@@ -1,45 +1,45 @@
 # Instagram Downloader
 
-Its Source Of Instagram Downloader Bot .This Bot Helps In Downloading __Instagram Photos__ and __Videos__ Using IG Public API. For Now It Works Only For **Public Accounts**. No Login or Money Required Just send The Instagram Post Link to Bot, It Will Send Video/Photo In Return.
+Sua fonte de Instagram Downloader Bot. Este bot ajuda no download de __Instagram Photos__ e __Videos__ usando a API pública do IG. Por enquanto, funciona apenas para **Contas Públicas**. Não é necessário fazer login ou dinheiro Basta enviar o link de postagem do Instagram para o bot, ele enviará vídeo / foto em troca.
 
 <p align="center">
   <img src="https://sm.ign.com/ign_in/screenshot/default/ig-glyph001-74am_dp6a.jpg" alt="Instagram"/>
 </p>
 
-## Requirements
+## Requisitos
 
 > python-telegram-bot\
 > requests
 
 ---
 
-## Setup
+## Como Configurar
 
-To Make Your Own Bot Using This Source. Follow Below Steps
+Para fazer seu próprio bot usando esta fonte. Siga as etapas abaixo
 
-> Go To [@BotFather](https://t.me/botfather) and Collect Your Bot Token
+> Vá para [@BotFather](https://t.me/botfather) e colete seu token de bot
 
 
-### Setup using Heroku
+### Configuração usando Heroku
 
-> Can Cause Error, Because Instagram Blocks Heroku IP
-
-* Fork This Repo
-* Open main.py and Paste Your Bot Token in __TOKEN__ Variable
-* Make Account On Heroku.com
-* Click New App
-* Give Name To Your App of Your Choice
-* Connect Heroku To Your Github By Clicking Deploy and then Deployment method in Your Heroku app
-* Search Your Forked Repo Name
-* Click Deploy, Wait Till Deployment
-* Go To Dynos, Turn It On and Check Your Bot
-
-### Locally Running On Server (I Prefer This) 
+> Pode causar erro, porque o Instagram bloqueia o IP do Heroku
 
 * Fork This Repo
-* Open main.py and Paste Your Bot Token in __TOKEN__ Variable
-* Download Forked Repo
-* On Terminal run Command
+* Abra main.py e cole seu token de bot na variável __TOKEN__
+* Faça uma conta no Heroku.com
+* Clique em Novo Aplicativo
+* Dê um nome ao seu aplicativo de sua escolha
+* Conecte o Heroku ao seu Github clicando em Implantar e, em seguida, no método de implantação no seu aplicativo Heroku
+* Pesquise seu nome de repositório bifurcado
+* Clique em implantar, aguarde até a implantação
+* Vá para Dynos, ligue-o e verifique seu bot
+
+### Executando localmente no servidor (prefiro isso)
+
+* Fork This Repo
+* Abra main.py e cole seu token de bot na variável __TOKEN__
+* Baixe o repositório bifurcado
+* No comando de execução do terminal
 ```bash
 pip install -r requirements.txt
 
@@ -47,8 +47,8 @@ python main.py
 ```
 ---
 
-## Credits
+## Créditos
 
-> Its Written by [@TheDarkW3b](https://t.me/TheDarkW3b)
-* Support Group :- https://t.me/Technology_Arena
-* Channel :- https://t.me/Dark_Hacker_X
+> Its Written by [@Saddam](https://t.me/sssasdasd)
+* Support Group :- https://discord.gg/TEMauza
+* My WebSite :- https://rzung.vercel.app/
