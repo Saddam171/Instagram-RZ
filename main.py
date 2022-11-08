@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# DONT_REMOVE_THIS
-#  TheDarkW3b (c)
-
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram import ParseMode, Update
 import logging
@@ -12,7 +8,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
                     level=logging.INFO)
 
-#Logger Setup
+#Configuração do registrador
 logger = logging.getLogger(__name__)
 
 TOKEN = "YOUR_TOKEN_HERE"
@@ -22,7 +18,7 @@ def download(update: Update, context: CallbackContext):
     instagram_post = message.text
     if instagram_post=="/start":
         context.bot.send_chat_action(chat_id=update.message.chat_id, action="typing")
-        update.message.reply_text("❤️ Thanks For Using Me Just Send Me The Link In Below Format  \n🔥 Format :- https://www.instagram.com/p/B4zvXCIlNTw/ \nVideos Must Be Less Then 20MB, For Now It Cannot Support Long IGTV Videos \n\n<b>Support Group :-</b> @Technology_Arena \n<b>🌀 Source</b> \nhttps://github.com/TheDarkW3b/instagram", parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+        update.message.reply_text("❤️ Obrigado por me usar, basta me enviar o link no formato abaixo  \n🔥 Format :- https://www.instagram.com/p/B4zvXCIlNTw/ \nOs vídeos devem ter menos de 20 MB, por enquanto não pode suportar vídeos IGTV longos \n\n<b>Support Group :-</b> @MDS \n<b>🌀 Source</b> \nhttps://github.com/Saddam171", parse_mode=ParseMode.HTML, disable_web_page_preview=True)
     else:
         pass
     if "instagram.com" in instagram_post:
@@ -34,7 +30,7 @@ def download(update: Update, context: CallbackContext):
             visit = requests.get(url).json()
             checking_video = visit['graphql']['shortcode_media']['is_video']
         except:
-            context.bot.sendMessage(chat_id=update.message.chat_id, text="Send Me Only Public Instagram Posts ⚡️")
+            context.bot.sendMessage(chat_id=update.message.chat_id, text="Envie-me apenas publicações públicas do Instagram ⚡️")
         
         if checking_video==True:
             try:
@@ -55,15 +51,15 @@ def download(update: Update, context: CallbackContext):
             context.bot.send_chat_action(chat_id=update.message.chat_id, action="typing")
             context.bot.sendMessage(chat_id=update.message.chat_id, text="I Cant Send You Private Posts :-( ")
     else:
-        context.bot.sendMessage(chat_id=update.message.chat_id, text="Kindly Send Me Public Instagram Video/Photo Url")
+        context.bot.sendMessage(chat_id=update.message.chat_id, text="Por favor, envie-me o URL público do vídeo/foto do Instagram")
 
 def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
-    logger.info("Setting Up MessageHandler")
+    logger.info("Configurando o MessageHandler")
     dp.add_handler(MessageHandler(Filters.text, download))
     updater.start_polling()
-    logging.info("Starting Long Polling!")
+    logging.info("Começando a sondagem longa!")
     updater.idle()
 
 if __name__ == "__main__":
